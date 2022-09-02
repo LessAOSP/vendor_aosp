@@ -23,9 +23,11 @@ CUSTOM_SECURITY_PATCH := 2022-08-05
 
 # Versioning props
 ADDITIONAL_SYSTEM_PROPERTIES  += \
-    org.lessaospos.version=$(LESSAOSP_VERSION_PROP) \
-    org.lessaospos.version.display=$(CUSTOM_VERSION) \
-    org.lessaospos.build_date=$(CUSTOM_BUILD_DATE) \
-    org.lessaospos.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.lessaospos.build_type=$(LESSAOSP_BUILD_TYPE) \
-    org.lessaospos.build_security_patch=$(CUSTOM_SECURITY_PATCH)
+    org.lessaosp.version=$(LESSAOSP_VERSION_PROP) \
+    org.lessaosp.version.display=$(CUSTOM_VERSION) \
+    org.lessaosp.build_date=$(CUSTOM_BUILD_DATE) \
+    org.lessaosp.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
+    org.lessaosp.build_type=$(LESSAOSP_BUILD_TYPE) \
+    org.lessaosp.build_security_patch=$(CUSTOM_SECURITY_PATCH) \
+    org.lessaosp.codename=$(LESSAOSP_CODENAME) \
+    ro.lessaosp.maintainer=$(LESSAOSP_MAINTAINER)
