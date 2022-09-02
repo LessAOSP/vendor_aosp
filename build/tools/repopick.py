@@ -159,12 +159,12 @@ def get_private_gerrit_url():
     return 'ssh://{0}@gerrit-staging.pixelexperience.org:29419'.format(username)
 
 if __name__ == '__main__':
-    # Default to PixelExperience Gerrit
+    # Default to LessAOSP Gerrit
     default_gerrit = 'https://gerrit.pixelexperience.org'
 
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent('''\
         repopick.py is a utility to simplify the process of cherry picking
-        patches from PixelExperience's Gerrit instance (or any gerrit instance of your choosing)
+        patches from LessAOSP's Gerrit instance (or any gerrit instance of your choosing)
 
         Given a list of change numbers, repopick will cd into the project path
         and cherry pick the latest patch available.
