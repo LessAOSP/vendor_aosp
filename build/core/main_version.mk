@@ -2,7 +2,7 @@
 ifeq ($(BUILD_FINGERPRINT),)
 BUILD_NUMBER_CUSTOM := $(shell date -u +%H%M)
 CUSTOM_DEVICE ?= $(TARGET_DEVICE)
-ifneq ($(filter OFFICIAL,$(CUSTOM_BUILD_TYPE)),)
+ifneq ($(filter OFFICIAL,$(LESSAOSP_BUILD_TYPE)),)
 BUILD_SIGNATURE_KEYS := release-keys
 else
 BUILD_SIGNATURE_KEYS := test-keys
@@ -20,10 +20,11 @@ endif
 
 # Versioning props
 ADDITIONAL_SYSTEM_PROPERTIES  += \
-    org.elixir.version=$(Elixir_BASE_VERSION) \
-    org.elixir.version.display=$(CUSTOM_VERSION) \
-    org.elixir.build_date=$(CUSTOM_BUILD_DATE) \
-    org.elixir.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.elixir.build_type=$(CUSTOM_BUILD_TYPE) \
-    org.elixir.codename=$(Elixir_CODENAME) \
-    ro.elixir.maintainer=$(Elixir_MAINTAINER)
+    org.lessaosp.version=$(LESSAOSP_VERSION_PROP) \
+    org.lessaosp.version.display=$(CUSTOM_VERSION) \
+    org.lessaosp.build_date=$(CUSTOM_BUILD_DATE) \
+    org.lessaosp.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
+    org.lessaosp.build_type=$(LESSAOSP_BUILD_TYPE) \
+    org.lessaosp.build_security_patch=$(CUSTOM_SECURITY_PATCH) \
+    org.lessaosp.codename=$(LESSAOSP_CODENAME) \
+    ro.lessaosp.maintainer=$(LESSAOSP_MAINTAINER)

@@ -235,7 +235,7 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 	genDir := android.PathForModuleGen(ctx)
 
 	// Pick a unique rule name and the user-visible description.
-	manifestName := "elixir.sbox.textproto"
+	manifestName := "lessaosp.sbox.textproto"
 	desc := "generate"
 	name := "generator"
 	manifestPath := android.PathForModuleOut(ctx, manifestName)
